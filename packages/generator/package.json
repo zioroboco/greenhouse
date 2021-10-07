@@ -1,0 +1,28 @@
+{
+  "name": "@zioroboco/generator-generator",
+  "version": "0.0.0",
+  "author": "Louis Quinnell <_@ziorobo.co>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zioroboco/generators.git",
+    "directory": "packages/generator"
+  },
+  "files": [
+    "!**/*.map",
+    "!**/*.ts",
+    "**/*.d.ts",
+    "**/*.js",
+    "!**/*.spec.*"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  }
+}

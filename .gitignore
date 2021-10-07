@@ -1,5 +1,12 @@
+packages/**/*.d.ts
+packages/**/*.d.ts.map
+packages/**/*.js
+packages/**/*.js.map
+
+*.code-workspace
 .vscode/
 node_modules/
+tsconfig.tsbuildinfo
 yarn-*.log
 
 .yarn/*
