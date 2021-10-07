@@ -24,5 +24,8 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean"
+  },
+  "peerDependencies": {
+    "begat": "^0"
   }
 }
