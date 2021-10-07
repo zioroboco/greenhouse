@@ -1009,6 +1009,8 @@ __metadata:
 "@zioroboco/generator-generator@workspace:packages/generator":
   version: 0.0.0-use.local
   resolution: "@zioroboco/generator-generator@workspace:packages/generator"
+  dependencies:
+    typescript: ^4.4.3
   peerDependencies:
     begat: ^0
   languageName: unknown

@@ -25,6 +25,9 @@
     "build": "tsc --build",
     "clean": "tsc --build --clean"
   },
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
   "peerDependencies": {
     "begat": "^0"
   }
