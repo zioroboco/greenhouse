@@ -12,7 +12,8 @@ type Options = {
 
 export const generatorGenerator: Generator<Options> = function (options) {
   return async context => {
-    // TODO clone should take ignore patterns (e.g. for compiler outputs)
+    // TODO clone should set ignore patterns (e.g. for compiler outputs)
+    // TODO should use require.resolve to find generator-generator
     await clone({ clonePath: __dirname })(context)
 
     const fs = fsFromVolume(context.volume).promises
