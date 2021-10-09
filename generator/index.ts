@@ -1,20 +1,20 @@
 import { clone } from "begat/std/clone"
+import { createRequire } from "module"
 import { dirname } from "path"
-import { fileURLToPath } from "url"
 import { fsFromVolume } from "begat/core/volume"
 import type { Generator } from "begat/core/api"
-
-const __dirname = dirname(fileURLToPath(import.meta.url))
 
 type Options = {
   generatorName: string
 }
 
+const require = createRequire(import.meta.url)
+const clonePath = dirname(require.resolve("@zioroboco/generator-generator"))
+
 export const generatorGenerator: Generator<Options> = function (options) {
   return async context => {
     // TODO clone should set ignore patterns (e.g. for compiler outputs)
-    // TODO should use require.resolve to find generator-generator
-    await clone({ clonePath: __dirname })(context)
+    await clone({ clone: { path: clonePath } })(context)
 
     const fs = fsFromVolume(context.volume).promises
 
