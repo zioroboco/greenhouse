@@ -1006,9 +1006,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zioroboco/generator-generator@workspace:packages/generator":
+"@zioroboco/generator-generator@workspace:generator":
   version: 0.0.0-use.local
-  resolution: "@zioroboco/generator-generator@workspace:packages/generator"
+  resolution: "@zioroboco/generator-generator@workspace:generator"
   dependencies:
     typescript: ^4.4.3
   peerDependencies:
@@ -1355,9 +1355,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"begat@portal:../begat/begat::locator=root-workspace-0b6124%40workspace%3A.":
+"begat@portal:../begat/package::locator=root-workspace-0b6124%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "begat@portal:../begat/begat::locator=root-workspace-0b6124%40workspace%3A."
+  resolution: "begat@portal:../begat/package::locator=root-workspace-0b6124%40workspace%3A."
   dependencies:
     "@types/ramda": ^0.27.45
     eta: ^1.12.3

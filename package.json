@@ -1,7 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "packages/*"
+    "./generator"
   ],
   "prettier": {
     "arrowParens": "avoid",
@@ -16,8 +16,8 @@
     }
   },
   "scripts": {
-    "build": "yarn workspaces foreach run build",
-    "clean": "yarn workspaces foreach run clean",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
     "lint": "yarn lint:prettier --write && yarn log:done prettier && yarn lint:eslint --fix && yarn log:done eslint",
     "lint-ci": "yarn lint:prettier --check && yarn log:done prettier && yarn lint:eslint --max-warnings=0 && yarn log:done eslint",
     "lint:eslint": "eslint . --ext .ts",
@@ -42,7 +42,7 @@
     "typescript": "^4.4.3"
   },
   "resolutions": {
-    "begat": "portal:../begat/begat"
+    "begat": "portal:../begat/package"
   },
   "packageManager": "yarn@3.1.0-rc.8"
 }

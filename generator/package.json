@@ -8,6 +8,11 @@
     "url": "https://github.com/zioroboco/generators.git",
     "directory": "packages/generator"
   },
+  "engines": {
+    "node": ">=16"
+  },
+  "type": "module",
+  "main": "./index.js",
   "files": [
     "!**/*.map",
     "!**/*.ts",
@@ -15,19 +20,6 @@
     "**/*.js",
     "!**/*.spec.*"
   ],
-  "engines": {
-    "node": ">=16"
-  },
-  "type": "module",
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
-  },
-  "devDependencies": {
-    "typescript": "^4.4.3"
-  },
   "peerDependencies": {
     "begat": "^0"
   }

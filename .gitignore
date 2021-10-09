@@ -1,7 +1,7 @@
-packages/**/*.d.ts
-packages/**/*.d.ts.map
-packages/**/*.js
-packages/**/*.js.map
+*.d.ts
+*.d.ts.map
+[!.]*.js
+*.js.map
 
 *.code-workspace
 .vscode/
