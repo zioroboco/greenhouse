@@ -18,19 +18,23 @@
   "scripts": {
     "build": "tsc --build",
     "clean": "tsc --build --clean",
+    "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest",
     "lint": "yarn lint:prettier --write && yarn log:done prettier && yarn lint:eslint --fix && yarn log:done eslint",
     "lint-ci": "yarn lint:prettier --check && yarn log:done prettier && yarn lint:eslint --max-warnings=0 && yarn log:done eslint",
     "lint:eslint": "eslint . --ext .ts",
     "lint:prettier": "prettier '**/*[!.d].{json,yaml,yml}' --loglevel=warn",
     "log:done": "echo '✔ '",
-    "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest"
+    "release": "yarn build && changeset publish",
+    "version": "changeset version && yarn"
   },
   "dependencies": {
+    "@changesets/cli": "^2.17.0",
     "@tsconfig/node16": "*",
     "@types/jest": "*",
     "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
+    "@zioroboco/changelog-github": "^0.1.1",
     "begat": "*",
     "eslint": "^7.32.0",
     "eslint-import-resolver-typescript": "^2.5.0",

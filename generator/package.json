@@ -8,6 +8,10 @@
     "url": "https://github.com/zioroboco/generators.git",
     "directory": "generator"
   },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
   "engines": {
     "node": ">=16"
   },
