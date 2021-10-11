@@ -1668,9 +1668,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"begat@portal:../begat/package::locator=root-workspace-0b6124%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "begat@portal:../begat/package::locator=root-workspace-0b6124%40workspace%3A."
+"begat@npm:*":
+  version: 0.1.1
+  resolution: "begat@npm:0.1.1"
   dependencies:
     "@types/ramda": ^0.27.45
     eta: ^1.12.3
@@ -1679,8 +1679,9 @@ __metadata:
     ramda: ^0.27.1
     tmp-promise: ^3.0.2
     ts-toolbelt: ^9.6.0
+  checksum: cf26884b3116db1c2ceae261d5c09aa7435221e02cc2456a24aab11e145f83ffe2286dc48255b8ff4c0fb6786b1788b3547fc25124b638b61e06f632d6f6f718
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "better-path-resolve@npm:1.0.0":
   version: 1.0.0

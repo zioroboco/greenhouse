@@ -1,4 +1,5 @@
 {
+  "packageManager": "yarn@3.1.0-rc.8",
   "private": true,
   "workspaces": [
     "./generator"
@@ -44,9 +45,5 @@
     "prettier": "^2.4.1",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.3"
-  },
-  "resolutions": {
-    "begat": "portal:../begat/package"
-  },
-  "packageManager": "yarn@3.1.0-rc.8"
+  }
 }
