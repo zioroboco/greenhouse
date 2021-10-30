@@ -18,6 +18,7 @@ jobs:
           node-version: 16.x
           cache: yarn
       - run: yarn install --immutable
+      - run: npm i -g npm@6
       - uses: changesets/action@c3d88279fd9abe11410de073005e34863f735b1c
         with:
           title: Release
