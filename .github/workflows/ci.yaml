@@ -16,6 +16,8 @@ jobs:
           cache: yarn
       - run: yarn install --immutable
       - run: yarn build
+        env:
+          GITHUB_TOKEN: ""
   test:
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +28,8 @@ jobs:
           cache: yarn
       - run: yarn install --immutable
       - run: yarn test --ci
+        env:
+          GITHUB_TOKEN: ""
   lint:
     runs-on: ubuntu-latest
     steps:
@@ -36,3 +40,5 @@ jobs:
           cache: yarn
       - run: yarn install --immutable
       - run: yarn lint-ci
+        env:
+          GITHUB_TOKEN: ""

@@ -28,5 +28,3 @@ jobs:
           version: yarn version
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
