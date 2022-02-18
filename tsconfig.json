@@ -13,6 +13,6 @@
 
     "noEmit": true
   },
-  "references": [],
+  "references": [{ "path": "./packages/task" }],
   "include": ["**/*.spec.ts"]
 }
