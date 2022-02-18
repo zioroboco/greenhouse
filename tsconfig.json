@@ -8,8 +8,11 @@
 
     "esModuleInterop": true,
     "module": "es2020",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "types": ["node"],
+
+    "noEmit": true
   },
   "references": [],
-  "files": []
+  "include": ["**/*.spec.ts"]
 }

@@ -12,7 +12,8 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": [
-      "./[!node_modules]*/tsconfig.json"
+      "./tsconfig.json",
+      "./packages/*/tsconfig.json"
     ],
     "sourceType": "module"
   },
@@ -37,10 +38,12 @@
     "eol-last": ["warn"],
     "key-spacing": ["warn"],
     "linebreak-style": ["warn", "unix"],
+    "import/extensions": ["warn", "always"],
+    "import/order": ["warn", { "groups": ["builtin", "external", "internal"], "newlines-between": "always"}],
     "no-trailing-spaces": ["warn"],
     "sort-imports-es6-autofix/sort-imports-es6": "warn",
     "space-before-blocks": ["warn", "always"],
     "space-in-parens": ["warn", "never"],
-    "spaced-comment": ["warn", "always", { "exceptions": ["?"] } ]
+    "spaced-comment": ["warn", "always", { "exceptions": ["?"] }]
   }
 }
