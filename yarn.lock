@@ -1264,6 +1264,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phyla/assert@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@phyla/assert@npm:0.1.0"
+  checksum: fffa7fbf71cab3d6c53109ffedab2c12e4668ae722ba8a832b59c508da9e77f6d202737d62eb042d15b8261083ef55073ef5cd4c13da333c79de81138da1d333
+  languageName: node
+  linkType: hard
+
+"@phyla/core@npm:~0.1.0":
+  version: 0.1.1
+  resolution: "@phyla/core@npm:0.1.1"
+  dependencies:
+    "@phyla/assert": ^0.1.0
+    clipanion: ^3.2.0-rc.9
+    ts-toolbelt: ^9.6.0
+    typanion: ^3.7.1
+    xstate: ^4.30.1
+  bin:
+    phyla: bin/cli.mjs
+  checksum: b4795c8c00f64b3fcc8e4703f4b853059e81f55392263f43283944a418ed3c1b3cb0877c98dc12834518f0abeb3094d09430b5d80d9a48598d8c5c670baacf52
+  languageName: node
+  linkType: hard
+
 "@sinonjs/commons@npm:^1.7.0":
   version: 1.8.3
   resolution: "@sinonjs/commons@npm:1.8.3"
@@ -1443,15 +1465,6 @@ __metadata:
   version: 2.4.1
   resolution: "@types/prettier@npm:2.4.1"
   checksum: df330c2d6fe7c282839b0f17701e069a9c6c96d2ff54704e933a1b3c1b98844d963a7cb00c5629d173604892ceee802312bbaeb8a97f5da21e13db8f653b519e
-  languageName: node
-  linkType: hard
-
-"@types/ramda@npm:^0.27.46":
-  version: 0.27.58
-  resolution: "@types/ramda@npm:0.27.58"
-  dependencies:
-    ts-toolbelt: ^6.15.1
-  checksum: 70f17033573a7d51e7bf4fd32526a26f216a03c15458a541a4da582799b959514c1e36fd0c62cdd0b12c260a40bf222db9da22a5454a59c228f132e9d07d67bb
   languageName: node
   linkType: hard
 
@@ -1964,25 +1977,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"begat@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "begat@npm:0.2.0"
-  dependencies:
-    "@types/ramda": ^0.27.46
-    clipanion: ^3.2.0-rc.3
-    eta: ^1.12.3
-    fast-glob: ^3.2.7
-    memfs: ^3.3.0
-    ramda: ^0.27.1
-    tmp-promise: ^3.0.3
-    ts-toolbelt: ^9.6.0
-    typanion: ^3.7.1
-  bin:
-    begat: bin/begat.mjs
-  checksum: cd9350359bba055f53b7670576f441ca17d38952d3902ad8fc7d712fa0f4d93f54ad7c61d068b29afaf2183a9b035e52daa7e4acd56b4fd420ad78dc3e78e84e
-  languageName: node
-  linkType: hard
-
 "better-path-resolve@npm:1.0.0":
   version: 1.0.0
   resolution: "better-path-resolve@npm:1.0.0"
@@ -2244,14 +2238,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clipanion@npm:^3.2.0-rc.3":
-  version: 3.2.0-rc.4
-  resolution: "clipanion@npm:3.2.0-rc.4"
+"clipanion@npm:^3.2.0-rc.9":
+  version: 3.2.0-rc.9
+  resolution: "clipanion@npm:3.2.0-rc.9"
   dependencies:
     typanion: ^3.3.1
   peerDependencies:
     typanion: "*"
-  checksum: c9d8ba9e16dca3016c32f42107a7602c52c9176626e0c815113c32b614ca125a9707221ec9df9c0a06e9741a23e0664153db1522c4f80b29f4b4d427fba002be
+  checksum: 00690c6112649314ad7c57c7d310d6dca26691d2c473d2a3682394cd1ec056ef229fc2c12856dce48806a51d481d1153f4f50435675f2b252b0be80e5e7f22f8
   languageName: node
   linkType: hard
 
@@ -3037,13 +3031,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eta@npm:^1.12.3":
-  version: 1.12.3
-  resolution: "eta@npm:1.12.3"
-  checksum: 390c1cd320755cb98fd5a4a911539e8ed498fc49b82414f0023033ff606d80a34e6df0aeeb9fb0b519b318a750e6d17a72fc25f8a8c686cfc52d638e998237a1
-  languageName: node
-  linkType: hard
-
 "execa@npm:^5.0.0":
   version: 5.1.1
   resolution: "execa@npm:5.1.1"
@@ -3105,7 +3092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.7":
+"fast-glob@npm:^3.1.1":
   version: 3.2.7
   resolution: "fast-glob@npm:3.2.7"
   dependencies:
@@ -3263,13 +3250,6 @@ __metadata:
   dependencies:
     minipass: ^3.0.0
   checksum: 1b8d128dae2ac6cc94230cc5ead341ba3e0efaef82dab46a33d171c044caaa6ca001364178d42069b2809c35a1c3c35079a32107c770e9ffab3901b59af8c8b1
-  languageName: node
-  linkType: hard
-
-"fs-monkey@npm:1.0.3":
-  version: 1.0.3
-  resolution: "fs-monkey@npm:1.0.3"
-  checksum: cf50804833f9b88a476911ae911fe50f61a98d986df52f890bd97e7262796d023698cb2309fa9b74fdd8974f04315b648748a0a8ee059e7d5257b293bfc409c0
   languageName: node
   linkType: hard
 
@@ -4873,15 +4853,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"memfs@npm:^3.3.0":
-  version: 3.3.0
-  resolution: "memfs@npm:3.3.0"
-  dependencies:
-    fs-monkey: 1.0.3
-  checksum: 9e9eb71cfc077fd5e14ad2f497f5a8791689b64f307cf379ed6737c5781652a7af0509395c0dfba43c4e413dbc7cd7010e9ca002168ec329e6df178414b96268
-  languageName: node
-  linkType: hard
-
 "meow@npm:^6.0.0":
   version: 6.1.1
   resolution: "meow@npm:6.1.1"
@@ -5658,13 +5629,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"ramda@npm:^0.27.1":
-  version: 0.27.1
-  resolution: "ramda@npm:0.27.1"
-  checksum: 31a0c0ef739b2525d7615f84cbb5d3cb89ee0c795469b711f729ea1d8df0dccc3cd75d3717a1e9742d42315ce86435680b7c87743eb7618111c60c144a5b8059
-  languageName: node
-  linkType: hard
-
 "react-is@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
@@ -5840,13 +5804,13 @@ fsevents@^2.3.2:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     "@changesets/cli": ^2.20.0
+    "@phyla/core": ~0.1.0
     "@tsconfig/node16": ^1.0.2
     "@types/jest": ^27.4.0
     "@types/node": ^17.0.18
     "@typescript-eslint/eslint-plugin": ^5.12.0
     "@typescript-eslint/parser": ^5.12.0
     "@zioroboco/changelog-github": ^0.1.1
-    begat: ^0.2.0
     eslint: ^8.9.0
     eslint-import-resolver-typescript: ^2.5.0
     eslint-plugin-import: ^2.25.4
@@ -6379,30 +6343,12 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"tmp-promise@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "tmp-promise@npm:3.0.3"
-  dependencies:
-    tmp: ^0.2.0
-  checksum: f854f5307dcee6455927ec3da9398f139897faf715c5c6dcee6d9471ae85136983ea06662eba2edf2533bdcb0fca66d16648e79e14381e30c7fb20be9c1aa62c
-  languageName: node
-  linkType: hard
-
 "tmp@npm:^0.0.33":
   version: 0.0.33
   resolution: "tmp@npm:0.0.33"
   dependencies:
     os-tmpdir: ~1.0.2
   checksum: 902d7aceb74453ea02abbf58c203f4a8fc1cead89b60b31e354f74ed5b3fb09ea817f94fb310f884a5d16987dd9fa5a735412a7c2dd088dd3d415aa819ae3a28
-  languageName: node
-  linkType: hard
-
-"tmp@npm:^0.2.0":
-  version: 0.2.1
-  resolution: "tmp@npm:0.2.1"
-  dependencies:
-    rimraf: ^3.0.0
-  checksum: 8b1214654182575124498c87ca986ac53dc76ff36e8f0e0b67139a8d221eaecfdec108c0e6ec54d76f49f1f72ab9325500b246f562b926f85bcdfca8bf35df9e
   languageName: node
   linkType: hard
 
@@ -6494,13 +6440,6 @@ fsevents@^2.3.2:
   bin:
     ts-jest: cli.js
   checksum: eb54e5b8fc5f06e4cc20ecec7891201ddc78a3537d5eb3775e29ffbc7e83fd2a68f91db801b6a8c820c872060b24dc41fb6decac800b76256d3cdda6520b5c4f
-  languageName: node
-  linkType: hard
-
-"ts-toolbelt@npm:^6.15.1":
-  version: 6.15.5
-  resolution: "ts-toolbelt@npm:6.15.5"
-  checksum: 24ad00cfd9ce735c76c873a9b1347eac475b94e39ebbdf100c9019dce88dd5f4babed52884cf82bb456a38c28edd0099ab6f704b84b2e5e034852b618472c1f3
   languageName: node
   linkType: hard
 
@@ -6975,6 +6914,13 @@ fsevents@^2.3.2:
   version: 2.2.0
   resolution: "xmlchars@npm:2.2.0"
   checksum: 8c70ac94070ccca03f47a81fcce3b271bd1f37a591bf5424e787ae313fcb9c212f5f6786e1fa82076a2c632c0141552babcd85698c437506dfa6ae2d58723062
+  languageName: node
+  linkType: hard
+
+"xstate@npm:^4.30.1":
+  version: 4.30.1
+  resolution: "xstate@npm:4.30.1"
+  checksum: be4317419a4981c67321160b005f9fe962e9d8b6afd985635b6830e743e30bf70c8b3fa76b8aab4165682a7460a4edc88646077145723e497fb56732be065765
   languageName: node
   linkType: hard
 
