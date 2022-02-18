@@ -1626,9 +1626,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@zioroboco/phyla-task@workspace:packages/task":
+"@zioroboco/phyla-task@*, @zioroboco/phyla-task@workspace:packages/task":
   version: 0.0.0-use.local
   resolution: "@zioroboco/phyla-task@workspace:packages/task"
+  dependencies:
+    "@zioroboco/phyla-task": "*"
+    memfs: ^3.4.1
   peerDependencies:
     "@phyla/core": ~0.1.0
   languageName: unknown
@@ -3253,6 +3256,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-monkey@npm:1.0.3":
+  version: 1.0.3
+  resolution: "fs-monkey@npm:1.0.3"
+  checksum: cf50804833f9b88a476911ae911fe50f61a98d986df52f890bd97e7262796d023698cb2309fa9b74fdd8974f04315b648748a0a8ee059e7d5257b293bfc409c0
+  languageName: node
+  linkType: hard
+
 "fs.realpath@npm:^1.0.0":
   version: 1.0.0
   resolution: "fs.realpath@npm:1.0.0"
@@ -4850,6 +4860,15 @@ fsevents@^2.3.2:
   version: 4.3.0
   resolution: "map-obj@npm:4.3.0"
   checksum: fbc554934d1a27a1910e842bc87b177b1a556609dd803747c85ece420692380827c6ae94a95cce4407c054fa0964be3bf8226f7f2cb2e9eeee432c7c1985684e
+  languageName: node
+  linkType: hard
+
+"memfs@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "memfs@npm:3.4.1"
+  dependencies:
+    fs-monkey: 1.0.3
+  checksum: 6d2f49d447d1be24ff9c747618933784eeb059189bc6a0d77b7a51c7daf06e2d3a74674a2e2ff1520e2c312bf91e719ed37144cf05087379b3ba0aef0b6aa062
   languageName: node
   linkType: hard
 
