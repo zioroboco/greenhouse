@@ -28,10 +28,12 @@
   "devDependencies": {
     "@jest/globals": "^27.5.1",
     "@phyla/core": "~0.1.0",
-    "@zioroboco/phyla-task": "*",
+    "@types/ramda": "^0.27.64",
+    "@zioroboco/phyla-task": "workspace:*",
     "memfs": "^3.4.1"
   },
   "dependencies": {
-    "expect": "^27.5.1"
+    "expect": "^27.5.1",
+    "ramda": "^0.28.0"
   }
 }

@@ -1,27 +1,27 @@
 import { Volume, createFsFromVolume } from "memfs"
-import { expect, test } from "@jest/globals"
+import { expect, it } from "@jest/globals"
 import { run } from "@phyla/core"
 
-import { Options, task } from "./task.js"
+import { task } from "./task.js"
 
-const cwd = "/my-project"
+const cwd = "/somewhere/project"
 
-test(`the happy path`, async () => {
+it(`clones its own package.json`, async () => {
   const volume = Volume.fromJSON(
     {
       "package.json": JSON.stringify({
         name: "test",
         version: "1.0.0",
+        dependencies: {
+          "dep-one": "1.0.0",
+          "dep-two": "2.0.0",
+        },
       }),
     },
     cwd
   )
 
-  const options: Options = {
-    package: "my-package",
-  }
-
-  await run(task(options), {
+  await run(task({}), {
     // @ts-ignore
     fs: createFsFromVolume(volume),
     cwd,
@@ -33,7 +33,12 @@ test(`the happy path`, async () => {
   const renderedPackageJson = JSON.parse(String(output[`${cwd}/package.json`]))
 
   expect(renderedPackageJson).toMatchObject({
-    name: "my-package",
-    version: "1.0.0",
+    name: "@zioroboco/phyla-project",
+    version: "0.0.0",
+    dependencies: {
+      "expect": expect.any(String),
+      "dep-one": "1.0.0",
+      "dep-two": "2.0.0",
+    },
   })
 })
