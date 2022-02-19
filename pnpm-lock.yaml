@@ -4,13 +4,13 @@ importers:
 
   .:
     specifiers:
+      '@changesets/changelog-github': ^0.4.2
       '@changesets/cli': ^2.20.0
       '@tsconfig/node16': ^1.0.2
       '@types/jest': ^27.4.0
       '@types/node': ^17.0.18
       '@typescript-eslint/eslint-plugin': ^5.12.0
       '@typescript-eslint/parser': ^5.12.0
-      '@zioroboco/changelog-github': ^0.1.1
       eslint: ^8.9.0
       eslint-import-resolver-typescript: ^2.5.0
       eslint-plugin-import: ^2.25.4
@@ -22,13 +22,13 @@ importers:
       ts-jest: ^27.1.3
       typescript: ^4.5.5
     devDependencies:
+      '@changesets/changelog-github': 0.4.2
       '@changesets/cli': 2.20.0
       '@tsconfig/node16': 1.0.2
       '@types/jest': 27.4.0
       '@types/node': 17.0.18
       '@typescript-eslint/eslint-plugin': 5.12.0_c467cf9bb49b295941e83ce479a578b7
       '@typescript-eslint/parser': 5.12.0_eslint@8.9.0+typescript@4.5.5
-      '@zioroboco/changelog-github': 0.1.1
       eslint: 8.9.0
       eslint-import-resolver-typescript: 2.5.0_1326372bbd2fe519ed5ba5fca843a914
       eslint-plugin-import: 2.25.4_eslint@8.9.0
@@ -422,6 +422,16 @@ packages:
       '@changesets/types': 4.0.2
       '@manypkg/get-packages': 1.1.3
       semver: 5.7.1
+    dev: true
+
+  /@changesets/changelog-github/0.4.2:
+    resolution: {integrity: sha512-qq8lJcq91ki7UT0fIfIcn5Yy7GJj19TmkLmGZ24/wEfxcD/nHHoTNRoi6nPt+Htf7qEudKxXLzQLi41B7Mt2vg==}
+    dependencies:
+      '@changesets/get-github-info': 0.5.0
+      '@changesets/types': 4.0.2
+      dotenv: 8.6.0
+    transitivePeerDependencies:
+      - encoding
     dev: true
 
   /@changesets/cli/2.20.0:
@@ -1139,16 +1149,6 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.12.0
       eslint-visitor-keys: 3.3.0
-    dev: true
-
-  /@zioroboco/changelog-github/0.1.1:
-    resolution: {integrity: sha512-ogqpaGmRlMGU52lKpcEks7NzDCDw502fVVWvjb0voLfJm55/TYVUlMx0ft4kIGj/tdugzpP6wzlpjJxGghu1xQ==, tarball: download/@zioroboco/changelog-github/0.1.1/d0824092dd9c44ffa78b717123084eae4d78ddc4701d56e24ea9bed57f6ee2fb}
-    dependencies:
-      '@changesets/get-github-info': 0.5.0
-      '@changesets/types': 4.0.2
-      dotenv: 8.6.0
-    transitivePeerDependencies:
-      - encoding
     dev: true
 
   /abab/2.0.5:
