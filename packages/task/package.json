@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zioroboco/garden.git",
+    "url": "https://github.com/zioroboco/greenhouse.git",
     "directory": "packages/task"
   },
   "publishConfig": {
