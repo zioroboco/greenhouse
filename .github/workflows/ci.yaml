@@ -2,32 +2,33 @@ name: ci
 
 on: push
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@2270f39ef63c3edf50be34da68c039eca5e15c15
+        with:
+          version: 6.31.0
       - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
-          cache: yarn
-      - run: yarn install --immutable
-      - run: yarn build
-      - run: yarn test --ci
-        env:
-          GITHUB_TOKEN: ""
+          cache: pnpm
+          node-version-file: .nvmrc
+          registry-url: https://npm.pkg.github.com
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm test-ci
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@2270f39ef63c3edf50be34da68c039eca5e15c15
+        with:
+          version: 6.31.0
       - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
-          cache: yarn
-      - run: yarn install --immutable
-      - run: yarn lint-ci
-        env:
-          GITHUB_TOKEN: ""
+          cache: pnpm
+          node-version-file: .nvmrc
+          registry-url: https://npm.pkg.github.com
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint-ci

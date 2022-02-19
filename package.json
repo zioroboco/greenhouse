@@ -1,9 +1,6 @@
 {
-  "packageManager": "yarn@3.1.1",
+  "packageManager": "pnpm@6.31.0",
   "private": true,
-  "workspaces": [
-    "./packages/*"
-  ],
   "prettier": {
     "arrowParens": "avoid",
     "semi": false
@@ -17,20 +14,21 @@
     }
   },
   "scripts": {
+    "packages/task": "cd packages/task && pnpm",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "test": "node --no-warnings --experimental-vm-modules node_modules/.bin/jest",
-    "lint": "yarn lint:prettier --write && yarn log:done prettier && yarn lint:eslint --fix && yarn log:done eslint",
-    "lint-ci": "yarn lint:prettier --check && yarn log:done prettier && yarn lint:eslint --max-warnings=0 && yarn log:done eslint",
+    "test": "NODE_OPTIONS='--no-warnings --experimental-vm-modules' jest",
+    "test-ci": "pnpm test -- --ci",
+    "lint": "pnpm lint:prettier --write && pnpm log:done prettier && pnpm lint:eslint --fix && pnpm log:done eslint",
+    "lint-ci": "pnpm lint:prettier --check && pnpm log:done prettier && pnpm lint:eslint --max-warnings=0 && pnpm log:done eslint",
     "lint:eslint": "eslint . --ext .ts",
     "lint:prettier": "prettier '**/*[!.d].{json,yaml,yml}' --loglevel=warn",
     "log:done": "echo '✔ '",
-    "release": "yarn build && changeset publish",
-    "version": "changeset version && yarn"
+    "release": "pnpm build && changeset publish",
+    "version": "changeset version && pnpm install"
   },
   "devDependencies": {
     "@changesets/cli": "^2.20.0",
-    "@phyla/core": "~0.1.0",
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.18",
