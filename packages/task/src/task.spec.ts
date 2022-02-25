@@ -1,8 +1,8 @@
 import { Volume, createFsFromVolume } from "memfs"
+import { execute } from "@phyla/core"
 import { expect, it } from "@jest/globals"
-import { run } from "@phyla/core"
 
-import { task } from "./task.js"
+import task from "./task.js"
 
 const cwd = "/somewhere/project"
 
@@ -21,11 +21,11 @@ it(`clones its own package.json`, async () => {
     cwd
   )
 
-  await run(task({}), {
+  await execute(task({}), {
     // @ts-ignore
     fs: createFsFromVolume(volume),
     cwd,
-    pipeline: { next: [], prev: [] },
+    tasks: { next: [], prev: [] },
   })
 
   const output = volume.toJSON()

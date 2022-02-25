@@ -1,13 +1,13 @@
 import * as path from "path"
 import { createRequire } from "module"
 
-import { Task } from "@phyla/core"
 import { mergeDeepLeft } from "ramda"
+import { task } from "@phyla/core"
 
 const require = createRequire(import.meta.url)
 const meta = require("../package.json")
 
-export const task: Task = options => ({
+export default task(() => ({
   name: meta.name,
   version: meta.version,
 
@@ -23,8 +23,6 @@ export const task: Task = options => ({
       )
     )
 
-    packageJson //?
-
     const dirname = path.basename(ctx.cwd)
     packageJson.name = `@zioroboco/phyla-${dirname}`
     packageJson.repository.directory = `packages/${dirname}`
@@ -34,4 +32,4 @@ export const task: Task = options => ({
       JSON.stringify(packageJson, null, 2) + "\n"
     )
   },
-})
+}))
